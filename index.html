@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script type= "module" src="scene.js"></script>
+</head>
+  <body>
+    <a-scene vr-mode-ui="enabled: true">
+        <a-entity position="0 1.6 0">
+            <a-camera>
+              <a-cursor rayOrigin="mouse"></a-cursor> <!-- für Klick/Gaze -->
+            </a-camera>
+        </a-entity>
+
+        <!-- Mikrofon-Status -->
+        <a-sphere id="micSphere" class="clickable" position="-1 1.5 -3" radius="0.5" color="gray" permission-toggle="microphone"
+                permission-status="denied">
+            <a-text value="Mic" align="center" position="0 -0.8 0" color="#fff"></a-text>
+        </a-sphere>
+
+        <!-- Kamera-Status -->
+        <a-sphere id="camSphere" class="clickable" position="1 1.5 -3" radius="0.5" color="gray" permission-toggle="camera"
+                permission-status="denied">
+            <a-text value="Cam" align="center" position="0 -0.8 0" color="#fff"></a-text>
+        </a-sphere>
+
+        <!-- Boden -->
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="8" height="8" color="#7BC8A4"></a-plane>
+    </a-scene>
+    
+  </body>
+</html>
