@@ -1,5 +1,5 @@
-import { initializeApp } from './firebase-app.js';
-import { getDatabase, ref, onValue, set } from './firebase-database.js';
+import { initializeApp } from './lib/firebase-app.js';
+import { getDatabase, ref, onValue, set } from './lib/firebase-database.js';
 
 // Deine Firebase Config
 const firebaseConfig = {
@@ -71,3 +71,4 @@ if (data && data.access) {
         }
 
       });
+
